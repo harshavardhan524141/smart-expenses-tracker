@@ -1,0 +1,6 @@
+{
+  "name": "Smart Expense Tracker & Budget Manager",
+  "description": "A modern financial management platform to track income, monitor expenses, set category budgets, and explore interactive spending analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

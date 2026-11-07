@@ -1,0 +1,20 @@
+{
+  "name": "smart-expense-tracker-backend",
+  "version": "1.0.0",
+  "description": "Express.js REST API for Smart Personal Expense Tracker and Budget Management System",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
