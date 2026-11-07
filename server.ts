@@ -50,11 +50,11 @@ async function startServer() {
     app.use(vite.middlewares);
   } else {
     // Serve production static assets from dist
-    const distPath = path.resolve(__dirname, 'dist');
-    app.use(express.static(distPath));
-    app.get('*', (_req, res) => {
-      res.sendFile(path.resolve(distPath, 'index.html'));
-    });
+   const distPath = path.resolve(__dirname, 'dist');
+app.use(express.static(distPath));
+app.get('*', (_req, res) => {
+  res.sendFile(path.resolve(distPath, 'index.html'));
+});
   }
 
   // Central error handler
