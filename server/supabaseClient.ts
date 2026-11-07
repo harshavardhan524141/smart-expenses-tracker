@@ -3,9 +3,13 @@ import { config } from './config.ts';
 
 // Get a Supabase client scoped to the user's JWT access token for RLS
 export function getAuthenticatedSupabaseClient(accessToken?: string): SupabaseClient | null {
-  if (!config.supabaseUrl || !config.supabaseAnonKey) {
-    return null;
-  }
+  if (
+  !config.supabaseUrl ||
+  !config.supabaseAnonKey ||
+  accessToken?.startsWith('demo-')
+) {
+  return null;
+}
 
   return createClient(config.supabaseUrl, config.supabaseAnonKey, {
     auth: {
